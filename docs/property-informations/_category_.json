@@ -1,0 +1,9 @@
+{
+  "label": "Property Informations",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+     "description": "This section provides endpoints related to hotel property configuration and metadata. Developers can retrieve information about hotel details, operational dates, currencies, reservation sources, and available rooms."
+  
+  }
+}
