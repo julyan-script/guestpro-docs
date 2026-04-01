@@ -16,29 +16,29 @@ type FooterProps = {
   sections: FooterSection[];
 };
 
-export default function Footer({ sections }: FooterProps) {
+export default function Footer({ sections = [] }: FooterProps) {
   return (
     <footer className="footer">
       <div className="footer__inner">
 
         <div className="footer__links">
 
-          {sections.map((section, i) => (
+          {sections?.map((section, i) => (
             <div key={i} className="footer__col">
               <div className="footer__title">{section.title}</div>
 
-             <div className="footer__items">
-  {section.items.map((item, j) => (
-    <a
-      key={j}
-      href={item.href || '#'}
-      className="footer__link-item"
-    >
-      {item.label}
-      {item.sub && `\n${item.sub}`}
-    </a>
-  ))}
-</div>
+              <div className="footer__items">
+                {section.items.map((item, j) => (
+                  <a
+                    key={j}
+                    href={item.href || '#'}
+                    className="footer__link-item"
+                  >
+                    {item.label}
+                    {item.sub && `\n${item.sub}`}
+                  </a>
+                ))}
+              </div>
 
             </div>
           ))}
