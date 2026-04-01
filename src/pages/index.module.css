@@ -1,23 +1,215 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* HERO BANNER */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
+  padding: 2rem;
+  width: 100%;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  overflow: hidden;
+
+  /* pakai variable biar ikut theme */
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary-dark)
+  );
+
+  color: white;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.1), transparent);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 32px;
+}
+
+/* BUTTONS GLOBAL */
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start; /* ⬅️ ini kuncinya */
+  flex-wrap: wrap;
+}
+
+/* BUTTON STYLE */
+.primaryButton {
+  background: white;
+  color: var(--ifm-color-primary-dark);
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.secondaryButton {
+  border: 2px solid white;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  background: white;
+  color: var(--ifm-color-primary-dark);
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 80px 20px;
+  background: var(--ifm-background-color);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* LEFT */
+.left {
+  flex: 1;
+}
+
+.left h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--ifm-heading-color);
+}
+
+.left p {
+  margin-top: 20px;
+  color: var(--ifm-font-color-base);
+  line-height: 1.6;
+}
+
+/* BUTTON GROUP */
+.buttons {
+  margin-top: 30px;
+}
+
+/* BUTTON */
+.primary {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.secondary {
+  border: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* RIGHT */
+.right {
+  flex: 1;
+}
+
+/* GRID FOTO */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
+}
+
+/* BOX DEFAULT */
+.box {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+
+/* BOX TINGGI */
+.boxTall {
+  grid-row: span 2;
+  background: #c7d2fe;
+  border-radius: 10px;
+}
+
+/* BOX LEBAR */
+.boxWide {
+  grid-column: span 2;
+  background: #bbf7d0;
+  border-radius: 10px;
+}
+
+/* DARK MODE FIX */
+[data-theme='dark'] .box {
+  background: #1e293b;
+}
+
+[data-theme='dark'] .boxTall {
+  background: #334155;
+}
+
+[data-theme='dark'] .boxWide {
+  background: #14532d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 996px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left h1 {
+    font-size: 28px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left h1 {
+    font-size: 24px;
+  }
 }

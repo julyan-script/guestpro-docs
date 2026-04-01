@@ -1,30 +1,98 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-background-color: #ffffff;
+  --ifm-font-color-base: #1f2937;
+
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-footer-background-color: #eef1f4;
+
+  --ifm-color-primary: #1f7a3e;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #020617;
+  --ifm-background-header-color: #080d20;
+  --ifm-background-surface-color: #020617;
+
+  --ifm-font-color-base: #ffffff;
+
+  --ifm-navbar-background-color: #020617;
+  --ifm-footer-background-color:  #000000;
+
+  --ifm-color-primary: #2ecc71; /* hijau terang */
 }
+
+/* CONTAINER FOOTER */
+.footer {
+  padding: 60px 20px; /* atas bawah + kiri kanan */
+}
+
+/* WRAPPER DALAM */
+.footer__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* GRID FOOTER */
+.footer__links {
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* Produk Kami jadi 2 kolom */
+.footer__links > div:nth-child(1) .footer__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+}
+
+/* Hubungi Kami juga jadi 2 kolom */
+.footer__links > div:nth-child(2) .footer__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+}
+
+/* TITLE */
+.footer__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ITEM LINK */
+.footer__item {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+/* COPYRIGHT */
+.footer__bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer__links {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.footer__link-item {
+  white-space: pre-line; /* ⬅️ penting */
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.footer__link-item:hover {
+  opacity: 1;
+  color: #84cc16; /* sama kayak tombol kamu */
+}
+
+
+
+

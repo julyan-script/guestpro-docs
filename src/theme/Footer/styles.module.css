@@ -1,0 +1,33 @@
+/* Aktifkan grid */
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* Column biar aman */
+.footer__col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Items wrapper */
+.footer__items {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Link reset */
+.footer__link-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  white-space: pre-line;
+}
+
+.footer__links > .footer__col:nth-child(1) .footer__items,
+.footer__links > .footer__col:nth-child(2) .footer__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 40px;
+}
