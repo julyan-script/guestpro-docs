@@ -23,7 +23,11 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255,255,255,0.1), transparent);
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
 }
 
 .inner {
@@ -66,7 +70,7 @@
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .secondaryButton {
@@ -93,7 +97,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
 
   display: flex;
   align-items: center;
@@ -133,13 +137,8 @@
   cursor: pointer;
 }
 
-.secondary {
-  border: 2px solid var(--ifm-color-primary);
-  color: var(--ifm-color-primary);
-  padding: 12px 20px;
-  border-radius: 8px;
-  background: transparent;
-  cursor: pointer;
+.primary:hover {
+  background: var(--ifm-color-primary-dark);
 }
 
 /* RIGHT */
@@ -149,42 +148,19 @@
 
 /* GRID FOTO */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
-  gap: 10px;
-}
-
-/* BOX DEFAULT */
-.box {
-  background: #e5e7eb;
-  border-radius: 10px;
-}
-
-/* BOX TINGGI */
-.boxTall {
-  grid-row: span 2;
-  background: #c7d2fe;
-  border-radius: 10px;
-}
-
-/* BOX LEBAR */
-.boxWide {
-  grid-column: span 2;
-  background: #bbf7d0;
-  border-radius: 10px;
+  display: flex;
 }
 
 /* DARK MODE FIX */
-[data-theme='dark'] .box {
+[data-theme="dark"] .box {
   background: #1e293b;
 }
 
-[data-theme='dark'] .boxTall {
+[data-theme="dark"] .boxTall {
   background: #334155;
 }
 
-[data-theme='dark'] .boxWide {
+[data-theme="dark"] .boxWide {
   background: #14532d;
 }
 
@@ -192,15 +168,13 @@
 @media (max-width: 996px) {
   .container {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .left h1 {
-    font-size: 28px;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
+  .left {
+    width: 100%;
+    max-width: 500px;
   }
 }
 
@@ -211,5 +185,17 @@
 
   .left h1 {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 996px) {
+  .buttons {
+    justify-content: center; /* hanya HP */
+  }
+}
+
+@media (max-width: 996px) {
+  .right {
+    display: none;
   }
 }

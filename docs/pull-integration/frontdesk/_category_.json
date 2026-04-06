@@ -1,0 +1,8 @@
+{
+  "label": "Front Desk",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "This section provides integration endpoints for sending reservation data into GuestPro (push API)."
+  }
+}

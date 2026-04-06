@@ -69,10 +69,7 @@ const config: Config = {
       ],
     },
 themeConfig: {
-  footer: {
-    style: 'dark',
-    links: [],
-  }
+    footer: undefined
 },
     prism: {
       theme: prismThemes.github,

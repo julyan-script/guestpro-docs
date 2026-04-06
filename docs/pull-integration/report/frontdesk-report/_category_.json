@@ -1,0 +1,9 @@
+{
+  "label": "Frontdesk",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Frontdesk report endpoints for occupancy and reservation operations (forecast, daily/MTD summaries, in-house, arrivals/departures, actual sales)."
+  
+  }
+}

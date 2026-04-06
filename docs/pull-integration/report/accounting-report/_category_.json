@@ -1,0 +1,9 @@
+{
+  "label": "Accounting",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Accounting report endpoints for finance-oriented views such as payment activity."
+  
+  }
+}

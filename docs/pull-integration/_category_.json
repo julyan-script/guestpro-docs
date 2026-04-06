@@ -1,0 +1,8 @@
+{
+  "label": "Pull Integration",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "pull-integration/index"
+  }
+}

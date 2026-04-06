@@ -1,0 +1,9 @@
+{
+  "label": "Report",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "This section provides reporting endpoints that return operational and financial reporting data."
+  
+  }
+}

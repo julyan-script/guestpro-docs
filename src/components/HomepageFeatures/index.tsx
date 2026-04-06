@@ -1,14 +1,10 @@
-import type {ReactNode} from 'react';
-import styles from './styles.module.css';
+import type { ReactNode } from "react";
+import styles from "./styles.module.css";
 
-import React from 'react'
+import React from "react";
 
 function index() {
-  return (
-    <div>
-      
-     </div>
-  )
+  return <div></div>;
 }
 
-export default index
+export default index;
